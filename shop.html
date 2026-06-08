@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
+    <title>Shop With Us</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana;
+        outline: none;
+        border: none;
+        text-decoration: none;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 110px;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      section {
+        padding: 25px 200px;
+      }
+
+      .bars {
+        background: #004aad;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 540;
+      }
+
+      header {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 10px 200px;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2px solid #cccccc6c;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      header .logo img {
+        width: 200px;
+        display: block;
+      }
+
+      header .navbar {
+        position: absolute;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      header .navbar a {
+        font-size: 14px;
+        margin-left: 25px;
+        transition: 0.3s ease;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+        color: #333;
+        transition: 0.3s;
+      }
+
+      header .navbar a:hover {
+        border-bottom: 2px solid #175c8e;
+      }
+
+      header .icons #menu-bar {
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+      }
+
+      header .icons #menu-bar:hover {
+        color: #175c8e;
+      }
+
+      .main {
+        position: relative;
+      }
+
+      #nabnab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width: 300px;
+        margin: 10px auto auto;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding: 20px 0;
+        background-color: #ffffff;
+      }
+
+      #EARRINGS,
+      #BRACELETS,
+      #NECKLACES,
+      #RINGS {
+        cursor: pointer;
+        position: relative;
+        font-size: 13px;
+        color: black;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: none;
+      }
+
+      #nabnab button:hover {
+        text-decoration: underline;
+      }
+
+      p,
+      h4,
+      .view {
+        font-size: 15px;
+      }
+
+      .pics .buy_box {
+        width: 60%;
+        margin: 0px auto 50px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        justify-items: center;
+        margin-bottom: 50px;
+      }
+
+      .pics .buy_box .card {
+        z-index: 50;
+        width: 330px;
+        height: 380px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px black;
+      }
+
+      .pics .buy_box .card .image {
+        width: 300px;
+        height: 250px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .pics .buy_box .card .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .pics .buy_box .card .image:hover img {
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      div > h4 {
+        margin-top: 10px;
+        padding-left: 25px;
+      }
+
+      div > p {
+        padding-left: 25px;
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+
+      .view {
+        background-color: white;
+        color: black;
+        padding: 5px 5px;
+        margin-left: 25px;
+        border: 1px solid black;
+        font-size: small;
+        margin-top: 30px;
+        box-shadow: 2px 3px lightgray;
+      }
+
+      .view:hover {
+        background-color: #004094;
+        color: white;
+      }
+
+      footer {
+        padding-top: 50px;
+        background: #f5f5f5;
+      }
+
+      .foot {
+        width: 90%;
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-content {
+        flex: 1;
+        min-width: 250px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .footer-content h3 {
+        color: #004aad;
+        font-size: 20px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .footer-content p,
+      .footer-content a {
+        color: #333;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .footer-content p {
+        padding: 4px 0;
+      }
+
+      .footer-content ul {
+        text-align: center;
+      }
+
+      .list {
+        padding: 0;
+      }
+
+      .list li {
+        width: auto;
+        text-align: center;
+        list-style: none;
+        position: relative;
+        padding: 4px 0;
+      }
+
+      .list a {
+        color: #333;
+        transition: 0.3s;
+      }
+
+      .list a:hover {
+        color: #004aad;
+      }
+
+      .list li::before {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #004aad;
+        transition-duration: 0.4s;
+      }
+
+      .list li:hover::before {
+        width: 60px;
+      }
+
+      .socials {
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      .socials li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        margin: 0 8px;
+      }
+
+      .socials i {
+        color: #000000;
+        font-size: 24px;
+        transition: 0.3s;
+        gap: 10px;
+      }
+
+      .list a {
+        text-decoration: none;
+      }
+
+      .list a:hover {
+        color: #004aad;
+      }
+
+      .socials i:hover {
+        color: #004aad;
+      }
+
+      .copyright {
+        background: #004aad;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+      }
+
+      .copyright p {
+        color: white;
+        font-size: 14px;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bars">
+      FREE SHIPPING FOR ORDERS OVER ₱500,000 • DISCOVER CALAYAN FINE JEWELRY
+    </div>
+
+    <header>
+      <a href="home.html" class="logo">
+        <img src="images/calayan.png" />
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <a href="home.html" class="navbar-link label-medium active">Home</a>
+        <a href="about.html" class="navbar-link label-medium">About Us</a>
+        <a href="shop.html" class="navbar-link label-medium">Jewelry</a>
+        <a href="contact.html" class="navbar-link label-medium">Contact Us</a>
+      </nav>
+    </header>
+
+    <div id="nabnab">
+      <button id="EARRINGS" onclick="showCategory('earrings')">EARRINGS</button>
+      <button id="BRACELETS" onclick="showCategory('bracelets')">
+        BRACELETS
+      </button>
+      <button id="NECKLACES" onclick="showCategory('necklaces')">
+        NECKLACES
+      </button>
+      <button id="RINGS" onclick="showCategory('rings')">RINGS</button>
+    </div>
+
+    <!-- EARRINGS -->
+    <div class="pics" id="earrings">
+      <div class="buy_box">
+        <div class="card">
+          <div class="image">
+            <img src="images/6.jpg" />
+          </div>
+          <div>
+            <h4>Nathalia</h4>
+            <p>1,200,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/7.jpg" />
+          </div>
+          <div>
+            <h4>Stephania</h4>
+            <p>2,300,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/8.jpg" />
+          </div>
+          <div>
+            <h4>Virelda</h4>
+            <p>1,500,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/9.jpg" />
+          </div>
+          <div>
+            <h4>Estaya</h4>
+            <p>3,250,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/10.jpg" />
+          </div>
+          <div>
+            <h4>Celeste</h4>
+            <p>1,700,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/11.jpg" />
+          </div>
+          <div>
+            <h4>Seravyn</h4>
+            <p>3,100,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRACELETS -->
+    <div class="pics" id="bracelets" style="display: none">
+      <div class="buy_box">
+        <div class="card">
+          <div class="image">
+            <img src="images/18.jpg" />
+          </div>
+          <div>
+            <h4>Angélia</h4>
+            <p>500,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/19.jpg" />
+          </div>
+          <div>
+            <h4>Ruveline</h4>
+            <p>450,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/20.jpg" />
+          </div>
+          <div>
+            <h4>Aurelia</h4>
+            <p>640,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/21.jpg" />
+          </div>
+          <div>
+            <h4>Solace</h4>
+            <p>560,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/3.jpg" />
+          </div>
+          <div>
+            <h4>Serenquell</h4>
+            <p>300,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/1.webp" />
+          </div>
+          <div>
+            <h4>Veltharic</h4>
+            <p>720,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NECKLACES -->
+    <div class="pics" id="necklaces" style="display: none">
+      <div class="buy_box">
+        <div class="card">
+          <div class="image">
+            <img src="images/14.jpg" />
+          </div>
+          <div>
+            <h4>Joanie</h4>
+            <p>1,500,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/1.jpg" />
+          </div>
+          <div>
+            <h4>Janae</h4>
+            <p>1,450,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/16.jpg" />
+          </div>
+          <div>
+            <h4>Seraphina</h4>
+            <p>640,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/17.jpg" />
+          </div>
+          <div>
+            <h4>Elara</h4>
+            <p>560,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/15.jpg" />
+          </div>
+          <div>
+            <h4>Luna</h4>
+            <p>300,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/2.jpg" />
+          </div>
+          <div>
+            <h4>Vivienne</h4>
+            <p>720,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RINGS -->
+    <div class="pics" id="rings" style="display: none">
+      <div class="buy_box">
+        <div class="card">
+          <div class="image">
+            <img src="images/22.jpg" />
+          </div>
+          <div>
+            <h4>Olivia</h4>
+            <p>500,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/23.jpg" />
+          </div>
+          <div>
+            <h4>Solene</h4>
+            <p>450,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/24.jpg" />
+          </div>
+          <div>
+            <h4>Estelle</h4>
+            <p>640,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/25.jpg" />
+          </div>
+          <div>
+            <h4>Zara</h4>
+            <p>560,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/26.jpg" />
+          </div>
+          <div>
+            <h4>Celeste</h4>
+            <p>300,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="images/27.jpg" />
+          </div>
+          <div>
+            <h4>Penelope</h4>
+            <p>720,000</p>
+          </div>
+          <a href="contact.html" class="view">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="foot">
+        <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email: info@calayanluxury.com.ph</p>
+          <p>Phone: (02) 8123 4567</p>
+          <p>Address: Dasmariñas, Cavite, Philippines</p>
+        </div>
+
+        <div class="footer-content">
+          <h3>Quick Links</h3>
+          <ul class="list">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="shop.html">Shop</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>CALAYAN FINE JEWELRY © 2026. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.onload = function () {
+        const hash = window.location.hash.substring(1);
+
+        if (hash === "EARRINGS") {
+          showCategory("earrings");
+        } else if (hash === "BRACELETS") {
+          showCategory("bracelets");
+        } else if (hash === "NECKLACES") {
+          showCategory("necklaces");
+        } else if (hash === "RINGS") {
+          showCategory("rings");
+        }
+      };
+
+      function showCategory(category) {
+        document.getElementById("earrings").style.display = "none";
+        document.getElementById("bracelets").style.display = "none";
+        document.getElementById("necklaces").style.display = "none";
+        document.getElementById("rings").style.display = "none";
+        document.getElementById(category).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
